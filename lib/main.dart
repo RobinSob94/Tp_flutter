@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'header.dart';
 import 'footer.dart';
 
@@ -35,22 +34,6 @@ class _HomeState extends State<Home> {
     });
   }
 
-  void changeHeaderColor() {
-    setState(() {
-      headerColor = getRandomColor();
-    });
-  }
-
-  Color getRandomColor() {
-    Random random = Random();
-    return Color.fromRGBO(
-      random.nextInt(256),
-      random.nextInt(256),
-      random.nextInt(256),
-      1,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,13 +46,6 @@ class _HomeState extends State<Home> {
           Flexible(
             flex: 1,
             child: Footer(onChoiceSelected: onChoiceSelected),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: changeHeaderColor,
-              child: Text('Changer la couleur'),
-            ),
           ),
         ],
       ),

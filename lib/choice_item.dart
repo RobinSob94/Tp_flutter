@@ -8,22 +8,19 @@ class ChoiceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: GestureDetector(
-        onTap: () => onSelected(choice),
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-          decoration: BoxDecoration(
-            color: Colors.grey[300],
-            borderRadius: BorderRadius.circular(18.0),
-            border: Border.all(color: Colors.grey),
-          ),
-          child: Text(
-            choice,
-            style: TextStyle(
-              color: Colors.black,
-            ),
+    return GestureDetector(
+      onTap: () => onSelected(choice),
+      child: Container(
+        margin: EdgeInsets.all(4.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        decoration: BoxDecoration(
+          color: Colors.grey[300],
+          borderRadius: BorderRadius.circular(18.0),
+        ),
+        child: Text(
+          choice,
+          style: TextStyle(
+            color: Colors.black,
           ),
         ),
       ),
